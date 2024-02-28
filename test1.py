@@ -1,2 +1,4 @@
 if __name__ == '__main__':
-    print('Hola Mundo')
+    
+    if 4>3:
+     print('Hola Mundo')
