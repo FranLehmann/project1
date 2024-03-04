@@ -1,8 +1,12 @@
-if __name__ == '__main__':
-    
-    print("Choose a number: ")
-    option = int(input())
-    if option>3:
-     print('Hola Mundo')
-    else:
-       print("Adios Mundo")
+import requests
+
+def getProducts():
+    try:
+        req = requests.get('https://api.escuelajs.co/api/v1/products')
+        print(req)
+        print(req.status_code)
+        print(req.text)
+
+
+    except:
+        raise Exception('Dosen`t find the resource.')
